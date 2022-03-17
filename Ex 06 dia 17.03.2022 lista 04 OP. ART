@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 06</title>
+</head>
+<body>
+    <h1>FREQUÊNCIA</h1> <br>
+
+    Coloque seu nome: <br>
+    <input id="nome"> <br><br>
+    Quantidade de aulas totais do curso: <br>
+    <input id="totais"> <br><br>
+    Quantidade de aulas que o aluno faltou: <br>
+    <input id="faltou"> <br><br>
+    <button onclick="calcular()">Calcular Frequência</button> <br><br>
+    <div id="mostrar"></div>
+
+            
+</body>
+</html>
+<script>
+
+function calcular() {
+    var frequencia = 100 - (faltou.value / totais.value) * 100
+
+
+    mostrar.innerHTML = `<span style="color: blue;"> Olá, ${nome.value}! Sua frequência foi de </span> <span style="color: green;"> <b>${frequencia}%</b>`
+}
+
+
+
+</script>
