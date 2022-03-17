@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 01</title>
+</head>
+<body>
+    <h1>TABUADA</h1> <br>
+    Coloque um número: <br>
+    <input id="tabuada"> <br> <br>
+
+    <button onclick="ver()">Ver tabuada</button> <br><br>
+
+<span id="mostrar"></span>
+    
+</body>
+</html>
+<script>
+function ver() {
+var var01 = tabuada.value * 1 
+var var02 = tabuada.value * 2
+var var03 = tabuada.value * 3
+var var04 = tabuada.value * 4
+var var05 = tabuada.value * 5
+var var06 = tabuada.value * 6
+var var07 = tabuada.value * 7
+var var08 = tabuada.value * 8
+var var09 = tabuada.value * 9
+var var10 = tabuada.value * 10
+mostrar.innerHTML = `${tabuada.value} x 1 = ${var01} <br> ${tabuada.value} x 2 = ${var02} <br> ${tabuada.value} x 3 = ${var03} <br> ${tabuada.value} x 4 = ${var04} <br> ${tabuada.value} x 5 = ${var05} <br> ${tabuada.value} x 6 = ${var06} <br> ${tabuada.value} x 7 = ${var07} <br> ${tabuada.value} x 8 = ${var08} <br> ${tabuada.value} x 9 = ${var09} <br> ${tabuada.value} x 10 = ${var10} `
+
+
+}
+</script>
