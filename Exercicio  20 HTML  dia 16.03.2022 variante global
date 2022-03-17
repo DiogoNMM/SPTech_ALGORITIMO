@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+<h1>EXERCICIO 20</h1><br>
+  Coloque o seu salário <br>
+  <input id="usuario"> <br> <br>
+     <button onclick="salario()">Confirmar salário</button>
+        <button onclick="pagarcem()">Pagar conta de 100</button>
+            <button onclick="pagarquinhentos()">Pagar conta de 500</button>
+                <button onclick="pagardoismil()">Ganhar 2000 na loteria</button> <br><br>
+
+    <div id="mostrar"></div>
+    
+</body>
+</html>
+<script>
+
+function salario() {
+    mostrar.innerHTML = "Grana atual: R$" + usuario.value
+}
+
+function pagarcem() {
+var valor =  usuario.value - 100 
+mostrar.innerHTML = `Grana atual: R$ ${valor} `
+}
+
+function pagarquinhentos() {
+    var valor = usuario.value - 500
+    mostrar.innerHTML = `Grana atual: R$ ${valor}`
+}
+
+function pagardoismil() {
+    var valor = usuario.value - 2000
+    mostrar.innerHTML = `Grana atual: R$ ${valor}`
+
+}
+</script>
