@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 12</title>
+</head>
+<body>
+<h1>HORAS DE SONO</h1> <br>
+Qantas horas de sono você domriu? <br>
+<input id="sono"> <br><br>
+<button onclick="calcular()">Calcular sono</button> <br><br>
+
+<span id="mostrar"></span>
+
+
+
+    
+</body>
+</html>
+<script>
+function calcular() {
+    var faseum = sono.value * 0.05
+    var fasedois = sono.value * 0.45
+    var fasetres = sono.value * 0.3
+    var fasequatro = sono.value * 0.2
+
+ mostrar.innerHTML = `${faseum.toFixed(2)} horas na fase 1 <br> ${fasedois.toFixed(2)} horas na fase 2 <br> ${fasetres.toFixed(2)} horas na fase 3 <br> ${fasequatro.toFixed(2)} horas na fase 4 `
+ 
+
+}
+
+
+
+</script>
