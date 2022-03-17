@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicío 22</title>
+</head>
+<body>
+<h1>EXERCICIO 22</h1> <br>
+    <button onclick="nossa()"> <span style="color: green;">Votos na <u>Praça é nossa</u>: <b id="praca"> 0</b> </span></button> <br><br>
+    <button onclick="zorratotal()"> <span style="color: green;"> Votos no <u>Zorra Total</u>: <b id="zorra"> 0 </b> </span> </button> <br><br>
+        <span style="color: green;"> Total de votos: <b id="total"> 0 </b> </span>
+
+
+
+
+    
+</body>
+</html>
+<script>
+var votospraca = 0
+var votoszorra = 0
+var tot = 0
+function nossa() {
+    votospraca += 1;
+praca.innerHTML = votospraca; 
+    tot += 1;
+    total.innerHTML = tot; 
+}
+
+function zorratotal() {
+    votoszorra += 1;
+zorra.innerHTML = votoszorra;
+    tot += 1;
+    total.innerHTML = tot;
+}
+
+
+
+
+</script>
