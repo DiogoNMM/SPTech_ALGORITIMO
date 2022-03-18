@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 03</title>
+</head>
+<body>
+ <h1>EXERCICIO 03</h1>
+<select id="caixa_um">
+<option value="Uma vez...">Uma vez...</option>
+<option value="Num belo dia...">Num belo dia...</option>
+<option value="Numa noite chuvosa...">Numa noite chuvosa...</option>
+</select>
+<select id="caixa_dois">
+<option value="Um peixe morreu afogado">Um peixe morreu afogado</option>
+<option value="Um gato tomou banho">Um gato tomou banho</option>
+<option value="Um corvo se curvou">Um corvo se curvou</option>
+</select> <br> <br>
+<button onclick="papum()">Juntar</button>
+
+
+    
+</body>
+</html>
+<script>
+function papum() {
+alert(`${caixa_um.value} ${caixa_dois.value}`);
+
+}
+
+
+
+
+</script>
