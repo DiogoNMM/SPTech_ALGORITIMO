@@ -1,2 +1,2 @@
-# SPTech_HTML
+# SPTech_ALGORITIMO
 Exercicios de HTML
