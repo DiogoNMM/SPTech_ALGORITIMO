@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 05</title>
+</head>
+<body>
+        <h1>TABUADA</h1>
+        selecione o número de sua escolha
+    <select id="resultado" onchange="botao()">
+        <option value="2">Tabuada do 2</option>
+        <option value="3">Tabuada do 3</option>
+        <option value="4">Tabuada do 4</option>
+        <option value="5">Tabuada do 5</option>
+        <option value="6">Tabuada do 6</option>
+        <option value="7">Tabuada do 7</option>
+        <option value="8">Tabuada do 8</option>
+        <option value="9">Tabuada do 9</option>
+    </select> <br><br>
+
+        <div id="mostrar"></div>
+    
+</body>
+</html>
+
+<script>
+function botao() {
+var var02 = resultado.value * 2
+var var03 = resultado.value * 3
+var var04 = resultado.value * 4
+var var05 = resultado.value * 5
+var var06 = resultado.value * 6
+var var07 = resultado.value * 7
+var var08 = resultado.value * 8
+var var09 = resultado.value * 9
+
+mostrar.innerHTML = `${resultado.value} x 2 = ${var02} <br> ${resultado.value} x 3 = ${var03} <br> ${resultado.value} x 4 = ${var04} <br> ${resultado.value} x 5 = ${var05} <br> ${resultado.value} x 6 = ${var06} <br> ${resultado.value} x 7 = ${var07} <br> ${resultado.value} x 8 = ${var08} <br> ${resultado.value} x 9 = ${var09}`
+
+}
+
+
+
+
+</script>
