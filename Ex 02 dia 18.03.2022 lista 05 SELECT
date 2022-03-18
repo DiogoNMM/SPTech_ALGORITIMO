@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 02</title>
+</head>
+<body>
+<h1>LAZER</h1>
+<select id="lazer">
+<option value="Hoje vamos assistir Marley e Eu">Cinema</option>
+<option value="Hoje vamos ver O Fantasma Da Ópera">Teatro</option>
+<option value="Vamos nos divertir muito no Hopi Hari">Parque</option>
+<option value="Mal posso esperar para ouvir a Lady Gaga">Show</option>
+</select>
+<button onclick="mostrar()">Ver atração</button>
+
+
+
+    
+</body>
+</html>
+<script>
+function mostrar() {
+alert(`${lazer.value}`)
+
+}
+
+
+
+
+</script>
