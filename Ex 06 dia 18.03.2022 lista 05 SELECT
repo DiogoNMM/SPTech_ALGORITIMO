@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 06</title>
+</head>
+<body>
+<h1>MELHORES ANIMES</h1>
+<select id="animes" onchange="mostrar()">
+<option value="https://s2.glbimg.com/d4CWTPmpuQ9fuudK7Zlv4MD8dhQ=/0x0:1856x1080/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2019/z/g/IZkGgJREC83BODB6smIA/dragon-ball-z-kakarot-techtudo.jpg">Dragon Ball Z</option>
+<option value="https://static.wikia.nocookie.net/naruto-pedia/images/e/ea/Naruto.png/revision/latest?cb=20120407114822&path-prefix=pt-br">Naruto</option>
+<option value="https://static.wikia.nocookie.net/fma/images/c/cd/FMAB.jpg/revision/latest?cb=20190928022419&path-prefix=pt-br">Fullmetal Alchemist</option>
+<option value="https://liberal.com.br/wp-content/uploads/2021/03/Aincrad-763x1080.png">Sword Art Online</option>
+</select> <br><br>
+
+  <img style="width: 200px;" id="olhando">  
+</body>
+</html>
+<script>
+function mostrar() {
+
+olhando.src = `${animes.value}`
+
+
+}
+
+
+</script>
