@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 05</title>
+</head>
+<body>
+<h1>CONTA DE LUZ</h1>
+Coloque seu consumo de kWh por dia <br><br>
+<input type="text" id="consumo"> <br>
+<button onclick="luz()">Calcular conta de luz</button>
+
+
+    
+</body>
+</html>
+<script>
+function luz() {
+var conta = consumo.value * 0.85 
+var total = conta * 30
+var desconto = total - (0.1 * total)
+alert (`Sua conta no total deu R$${(total).toFixed(2)}`)
+if (total < 100) {
+    alert (`Com um desconto sua conta ficou em R$${(desconto).toFixed(2)}`)
+}
+
+}
+
+
+
+</script>
