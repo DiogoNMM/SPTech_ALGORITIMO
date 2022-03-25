@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Multas de CNH</h1>
+
+    <input type="text" id="cnh" placeholder="Coloque seus pontos na cnh"> <br><br>
+<button onclick="calculo()">calcular</button> <br>
+<div id="mostrar"></div>
+
+</body>
+</html>
+<script>
+function calculo() {
+var mais = cnh.value * 87
+var menos = cnh.value * 78
+if (cnh.value >= 20) {
+    alert ("Você está com a carteira suspensa")
+    mostrar.innerHTML = `Sua multa total é de R$ ${(mais).toFixed(2)}`
+
+}else {
+    mostrar.innerHTML = `Você está com ${cnh.value} pontos e tem quer ser pago R$${(menos).toFixed(2)}`
+}
+
+}
+
+
+
+
+
+</script>
