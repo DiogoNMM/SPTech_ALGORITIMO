@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="conversor.css">
+    <title>Conversor</title>
+</head>
+<body>
+    <center>
+<h1>O MELHOR CONVERSOR DE TODOS</h1>
+<h3><b>Coloque um número em decimal</b></h3>
+<input type="text" id="deci"> <br>
+
+
+<h3><b>BINÁRIO</b></h3>
+<div id="bina" style="display: block;background-color: rgba(11, 119, 96, 0.562);border-radius: 5px;padding: 5px;color: black;width: 15%;height: 40px;font-weight: 500;">0</div> <br><br>
+
+<h3><b>OCTAL</b></h3>
+<div id="octal" style="display: block;background-color: rgba(11, 119, 96, 0.562);border-radius: 5px;padding: 5px;color: black;width: 15%;height: 40px;font-weight: 500;">0</div> <br><br>
+
+<h3><b>HEXADECIMAL</b></h3>
+<div id="hexa" style="display: block;background-color: rgba(11, 119, 96, 0.562);border-radius: 5px;padding: 5px;color: black;width: 15%;height: 40px;font-weight: 500;">0</div> <br><br>
+<button class="button button" onclick="converter()">Conversão</button>
+
+    </center>
+
+
+
+</body>
+</html>
+<script>
+function converter() {
+var decimal = Number(deci.value)
+bina.innerHTML = `${(decimal).toString(2) }`
+octal.innerHTML = `${(decimal).toString(8)}`
+hexa.innerHTML = `${(decimal).toString(16)}`
+}
+
+
+
+
+</script>
