@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EXERCICIO 07</title>
+</head>
+<body>
+<h1>Como está meu atendimento?</h1>
+<select id="atendimento" onchange="confirmar()">
+<option value="1">1 estrela</option>
+<option value="2">2 estrelas</option>
+<option value="3">3 estrelas</option>
+<option value="4">4 estrelas</option>
+<option value="5">5 estrelas</option>
+</select> <br><br>
+
+Média atual: <b id="media">0</b> estrelas <br>
+Número de avaliações: <b id="avaliacao">0</b> <br><br>
+
+
+</body>
+</html>
+<script>
+    var ax_atual = 0
+    var ax_numero = 0
+    
+function confirmar() {
+    ax_numero += 1;
+    ax_atual += Number(atendimento.value);
+    
+ media.innerHTML = ax_atual / ax_numero
+ avaliacao.innerHTML = ax_numero
+}
+
+
+
+
+</script>
