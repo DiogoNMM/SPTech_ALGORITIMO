@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11</title>
+</head>
+<body>
+<h1>Banco</h1>
+Qual o seu saldo no banco? <br>
+<input type="text" id="saldo"> <br><br>
+<button onclick="verificar()">Verificar finanças</button> <br><br>
+<div id="mostrar"></div>
+    
+</body>
+</html>
+
+<script>
+function verificar() {
+if (saldo.value == 0) {
+    mostrar.innerHTML = '<span style="color: black">Conta zerada</span>'
+}
+
+if (saldo.value < 0 ) {
+    mostrar.innerHTML = '<span style="color: red">Esta devendo</span>'
+    
+}
+
+if (saldo.value > 0) {
+    mostrar.innerHTML = '<span style="color: blue">Saldo positivo!!</span>'
+}
+
+
+}
+
+
+
+</script>
