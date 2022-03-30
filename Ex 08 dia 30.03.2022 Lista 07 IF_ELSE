@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 08</title>
+</head>
+<body>
+<h1>ELEVADOR</h1>
+Quantidade de homens: <br>
+<input type="text" id="homem"> <br><br>
+Quantidade de mulher: <br>
+<input type="text" id="mulher"> <br><br>
+<button onclick="ligar()">Ligar elevador</button> <br><br>
+<div id="mostrar"></div>
+    
+</body>
+</html>
+<script>
+function ligar() {
+var men = homem.value * 90
+var woman = mulher.value * 70
+var total = Number(men) + Number(woman)
+var preciso = total - 500
+
+if (total < 500) {
+    mostrar.innerHTML = `<span style="color: green;">Elevador vai se mover, pois está com ${total}kg </span>`
+}else{
+    mostrar.innerHTML = `<span style="color: red;">Alguém precisa descer. Precisa perder ${preciso}kg para mover o elevador</span>`
+}
+
+}
+
+
+
+</script>
