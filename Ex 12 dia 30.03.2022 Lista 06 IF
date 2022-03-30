@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+</head>
+<body>
+Coloque a quantidade de filhos que possuí: <br>
+<input type="text" id="filhos"> <br><br>
+<button onclick="analisar()">Analisar familia</button> <br><br>
+<div id="mostrar"></div>
+<div id="mostrardois"></div>
+<div id="mostrartres"></div>
+<div id="mostrarqua"></div>
+</body>
+</html>
+<script>
+function analisar() {
+
+if (filhos.value >= 1) {
+    mostrar.innerHTML = 'Não tem TV'
+} 
+
+if (filhos.value >= 2) {
+    mostrardois.innerHTML = 'Não tem internet'
+}
+
+if (filhos.value >= 3) {
+    mostrartres.innerHTML = 'Não tem video-game'
+    
+}
+
+if (filhos.value >= 4) {
+    mostrarqua.innerHTML = 'Não tem Netflix'
+}
+
+}
+
+
+</script>
