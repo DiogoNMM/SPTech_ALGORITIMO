@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02</title>
+</head>
+<body>
+    <h1>Tuvalu</h1>
+    Coloque sua renda familiar mensal:
+    <input type="text" id="mensal"> <br><br>
+    <button onclick="analisar()">Analisar renda</button> <br><br>
+    <div id="mostrar"></div>
+    
+</body>
+</html>
+<script>
+function analisar() {
+if (mensal.value <= 250) {
+    mostrar.innerHTML = `Classe E`
+}else {
+    if (mensal.value <= 900) {
+        mostrar.innerHTML = `Classe D`
+    }else {
+        if (mensal.value <= 2500) {
+            mostrar.innerHTML = `Classe C`
+        }else{
+            if (mensal.value <= 9500) {
+                mostrar.innerHTML = `Classe B`
+            }else {
+                mostrar.innerHTML = `Classe A`
+            }
+        }
+    }
+}
+
+
+
+}
+
+
+</script>
