@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+<h1>Banco SPTO</h1>
+Qual o seu nome?
+<input type="text" id="nome"> <br><br>
+Qual o seu saldo?
+<input type="text" id="saldo"> <br><br>
+<button onclick="verificar()">Verificar conta</button> <br><br>
+<div id="mostrar"></div>
+
+    
+</body>
+</html>
+<script>
+function verificar(){
+if (saldo.value <0) {
+    mostrar.innerHTML = `Com o saldo R$${saldo.value} o cliente ${nome.value} está com saldo devedor`
+}else {
+    if (saldo.value <= 2000) {
+        mostrar.innerHTML = `Com o saldo de R$${saldo.value} o cliente ${nome.value} está com o saldo NORMAL`
+    }else {
+        if (saldo.value <= 5000) {
+            mostrar.innerHTML = `Com o saldo de R$${saldo.value} o cliente ${nome.value} está com o saldo ACIMA DA MÉDIA`
+        }else {
+            mostrar.innerHTML = `Com o saldo de R$${saldo.value} o cliente ${nome.value} está com um PERFIL DE INVESTIDOR`
+        }
+    }
+}
+
+
+
+}
+
+</script>
