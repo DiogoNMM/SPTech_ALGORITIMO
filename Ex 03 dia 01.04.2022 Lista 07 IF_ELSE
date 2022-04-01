@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 03</title>
+</head>
+<body>
+<h1>Mercadinho BOM DOCE</h1>
+Quantidade de chocolates comprados: <br>
+<input type="text" id="comprado"> <br><br>
+<button onclick="conta()">Compra</button> <br><br>
+<div id="mostrar"></div>
+
+    
+</body>
+</html>
+<script>
+    function conta(){ 
+var doze = comprado.value * 3.00
+var maisdoze = comprado.value * 2.50
+
+if (comprado.value <= 12) {
+    mostrar.innerHTML = `O valor da sua compra foi de <u>R$${(doze).toFixed(2)}</u>`
+} else {
+    mostrar.innerHTML = `o valor da sua compra foi de <u>R$${(maisdoze).toFixed(2)}</u>`
+}
+    }
+</script>
