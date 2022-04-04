@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 12</title>
+</head>
+<body>
+<h1>Rei dos cliques</h1>
+Você já clicou <span id="contar">0</span> vezes. <br> <br>
+<div id="mostrar"></div> <br>
+<button onclick="clica()">Clica meu</button>    
+</body>
+</html>
+<script>
+var glob = 0
+function clica() {
+glob += 1
+contar.innerHTML = glob
+if (contar.innerHTML < 5 ) {
+    mostrar.innerHTML = 'Dedo fraquinho, hein'
+} else {
+    if (contar.innerHTML <= 10) {
+       mostrar.innerHTML = 'Dedo bom, mano' 
+    }else {
+        if (contar.innerHTML <= 15){
+            mostrar.innerHTML = 'Gosta de clicar,hein!'
+        }else{
+            mostrar.innerHTML = 'Eita dedo nervoso!'
+        }
+    }
+}
+
+}
+
+
+</script>
