@@ -7,30 +7,19 @@
     <title>EXERCICIO 08</title>
 </head>
 <body>
-    <h1>HOBBY</h1>
-    <b>Qual hobby você gostaria de praticar?</b> <br> <br>
-    <select id="hobby" onchange="mostrar()">
-    <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Dancer_With_Red_Dress_Emoji_400x400.png">Dança</option>
-    <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Virus_Emoji_400x400.png">Video game</option>
-    <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Man_Bowing_Emoji_400x400.png">Assistir tv/streaming</option>
-    <option value="https://cdn.shopify.com/s/files/1/1061/1924/files/Sign_of_the_Horns_Emoji_400x400.png">Ouvir rock</option>
-    </select> <br> <br>
+<h1>Como está meu atendimento?</h1>
+<select id="">
+<option value="">1 estrela</option>
+<option value="">2 estrelas</option>
+<option value="">3 estrelas</option>
+<option value="">4 estrelas</option>
+<option value="">5 estrelas</option>
+</select>
 
-    <img style="width: 50px;" id="olhando">
 
+
+
+
+    
 </body>
 </html>
-<script>
-
-
-
-function mostrar() {
-
-    olhando.src = `${hobby.value}`
-
-}
-
-
-
-
-</script>
