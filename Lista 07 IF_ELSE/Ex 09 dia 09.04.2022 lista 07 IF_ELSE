@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 09</title>
+</head>
+<body>
+    <h1>ESCOLHA DE ANIMAIS</h1>
+    <select name="" id="especie" onchange="escolhaespecie()">
+        <option value="1">Escolha uma espécie</option>
+        <option value="2">Ovíparos</option>
+        <option value="3">Mamiferos</option>
+    </select> <br><br>
+
+    <select name="" id="ovi" style="display: none;" onchange="escolhaovi()">
+        <option value="4">Escolha um ovíparo</option>
+        <option value="5">Galinha</option>
+        <option value="6">Peixe</option>
+        <option value="7">Tartaruga</option>
+    </select> <br>
+
+    <select name="" id="mami" style="display: none;" onchange="escolhamami()">
+        <option value="8">Escolha um mamífero</option>
+        <option value="9">Elefante</option>
+        <option value="10">Porco</option>
+        <option value="11">Coelho</option>
+    </select><br>
+
+    <div id="mostrar" style="display: none;"></div>
+    <div id="valorovi" style="display: none;">
+        <br>
+        Valor de compra do animal: <br>
+        <input type="text" id="compraovi"> <br>
+        <button  onclick="calcularovi()">Calcular imposto</button> <button onclick="restartovi()">Restart</button> <br><br>
+        <div id="mostrarcalculoovi"></div>
+    </div>
+    <div id="valormami" style="display: none;">
+        <br>
+        Valor de compra do animal: <br>
+        <input type="text" id="compramami"><br>
+        <button onclick="calcularmami()">Calcular imposto</button> <button onclick="restartmami()">Restart</button> <br><br>
+        <div id="mostrarcalculomami"></div>
+    </div> 
+    
+    
+
+
+</body>
+</html>
+<script>
+    var impostoovi = 0
+    var impostomami = 0
+
+    function escolhaespecie(){
+        if (especie.value == 2) {
+            ovi.style.display = 'block';
+        }else{
+            if (especie.value == 3) {
+                mami.style.display = 'block';
+            }
+        }
+    }
+
+    function escolhaovi() {
+        if (ovi.value == 5 ) {
+            valorovi.style.display = 'block';   
+            mostrar.style.display = 'block';         
+            mostrar.innerHTML = '<img src="https://folhago.com.br/blogs/my-pet/wp-content/uploads/2022/02/galinha-balao-1024x683.jpg" width="200px" heigth="200px">'
+        }if (ovi.value == 6) {
+            valorovi.style.display = 'block';     
+            mostrar.style.display = 'block';       
+            mostrar.innerHTML = '<img src="https://www.dicaspetz.com.br/wp-content/uploads/2020/06/peixe-sente-dor-pet.jpg" width="200px" heigth="200px">'
+        }if (ovi.value == 7) {
+            valorovi.style.display = 'block';   
+            mostrar.style.display = 'block';         
+            mostrar.innerHTML = '<img src="https://www.dicaspetz.com.br/wp-content/uploads/2020/05/como-criar-tartaruga.jpg" width="200px" heigth="200px">'
+        }
+    }
+
+    function escolhamami() {
+        if (mami.value == 9) {
+            valormami.style.display = 'block';
+            mostrar.style.display = 'block';       
+            mostrar.innerHTML = '<img src="https://static.biologianet.com/2020/05/elefante-africano.jpg" width="200px" heigth="200px">' 
+        }if (mami.value == 10) {
+            valormami.style.display = 'block'; 
+            mostrar.style.display = 'block';        
+            mostrar.innerHTML = '<img src="https://i2.wp.com/files.agro20.com.br/uploads/2019/03/racas-de-porco-02.jpg?resize=600%2C338&ssl=1" width="200px" heigth="200px">'
+        }if (mami.value == 11) {
+            valormami.style.display = 'block';
+            mostrar.style.display = 'block'; 
+            mostrar.innerHTML = '<img src="https://blog.cobasi.com.br/wp-content/webpc-passthru.php?src=https://blog.cobasi.com.br/wp-content/uploads/2021/01/mini-coelho-capa.png&nocache=1" width="200px" heigth="200px">'
+        }
+    }
+    
+    function calcularovi(){
+        var totalovi = compraovi.value * 0.05
+        impostoovi = totalovi
+        mostrarcalculoovi.innerHTML = `O imposto será de R$ ${(impostoovi).toFixed(2)}`
+        
+    }
+
+    function calcularmami(){
+        var totalmami = compramami.value * 0.1
+        impostomami = totalmami
+        mostrarcalculomami.innerHTML = `O imposto será de R$ ${(impostomami).toFixed(2)}`
+    }
+
+    function restartovi() {
+        var impostototalovi = Number(impostoovi) + Number(compraovi.value)
+        alert (`Valor total de todos os impostos calculados R$ ${(impostototalovi).toFixed(2)}`)
+        valorovi.style.display = 'none';
+        ovi.style.display = 'none';
+        mostrar.style.display = 'none';
+    }
+
+    function restartmami() {
+        var impostototalmami = Number(impostomami) + Number(compramami.value)
+        alert (`Valor total de todos os impostos calculados R$ ${(impostototalmami).toFixed(2)}`)
+        valormami.style.display = 'none';
+        mami.style.display = 'none';
+        mostrar.style.display = 'none';
+    }
+
+</script>
