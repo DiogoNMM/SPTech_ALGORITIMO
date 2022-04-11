@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 17</title>
+</head>
+<body>
+    <h1>COZINHA DO CLAUDIO</h1>
+    <h4>Qual tipo de arroz foi usado</h4>
+    <select name="" id="arroz">
+        <option value="1">Integral</option>
+        <option value="2">Branco</option>
+    </select> <br>
+    <h4>Quanto tempo de cozimento (minutos)</h4>
+    <input type="text" id="cozimento"> <br><br>
+    <h4>Quantidade de sal usado (gramas)</h4>
+    <input type="text" id="sal"> <br><br>
+    <button onclick="avaliar()">Avaliar arroz</button> <br><br>
+    <div id="mostrar"></div>
+</body>
+</html>
+<script>
+function avaliar(){
+    if (arroz.value == 1 && cozimento.value <= 20 && sal.value <= 15) {
+        mostrar.innerHTML = "Seu arroz está perfeito"
+    } else{
+        mostrar.innerHTML = "Seu arroz não está perfeito"
+    }
+        
+
+
+    if (arroz.value == 2 && cozimento.value == 10 || sal.value <= 15) {
+        mostrar.innerHTML = "Arroz perfeito"
+    }
+        if (arroz.value == 2 && cozimento.value < 10 && sal.value > 15 ) {
+            mostrar.innerHTML = "Seu arroz não está perfeito"
+        }
+    
+    
+           }       
+            
+</script>
