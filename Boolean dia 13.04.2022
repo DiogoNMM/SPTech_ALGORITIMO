@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MEDIA</h1>
+    <h4>Qual a sua media?</h4>
+    <input type="text" id="media"> <br>
+    <h4>Qual a sua frequência?</h4>
+    <input type="text" id="frequencia"> <br><br>
+    <button onclick="analisar()">Avaliar</button>
+</body>
+</html>
+<script>
+    function analisar(){
+        // var mediaok = media.value >= 6;
+        // var frequenciaok = frequencia.value >= 75;
+        // var aprovado = mediaok && frequenciaok;
+        // // if (aprovado == false) {
+        // //     alert('REPROVADO')
+        // // }else{
+        // //     alert('APROVADO')
+        // // }
+
+        // if (aprovado) {
+        //     alert('APROVADO')
+        // }else {
+        //     alert ('REPROVADO')
+        // }
+
+        // var seila = true;
+        // //não colocar em parenteses
+        // if (seila) {
+        //     alert('verdadeiro')
+        // }else{
+        //     alert('falso')
+        // }
+    }
+</script>
