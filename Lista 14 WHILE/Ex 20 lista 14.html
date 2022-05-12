@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 20</title>
+</head>
+
+<body>
+<h3>Quantidade de passagens de onibus</h3>
+<input type="text" id="onibus">
+<h3>Quantidade de passagens de trem</h3>
+<input type="text" id="trem">
+<h3>Quantidade de passagens de metro</h3>
+<input type="text" id="metro"> <br><br>
+<button onclick="partiu()">#PartiuTrajeto</button> <br> <br>
+<div id="mostrar"></div>
+</body>
+
+</html>
+
+<script>
+    
+function partiu() {
+var bus = 1;
+var tre = 1;
+var met = 1;
+    while (io <= onibus.value) {
+        tela.innerHTML += `<span style="color:red">Pegando o ${bus}º buzão</span><br>`
+        bus++
+    } 
+    while (it <= trem.value) {
+        tela.innerHTML += `<span style="color:green">Pegando o ${tre}º trem</span><br>`
+        tre++
+    } 
+    while (im <= metro.value) {
+        tela.innerHTML += `<span style = "color:blue">Pegando o ${met}º metrô</span><br>`
+        met++
+    }
+}
+</script>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 15</title>
+</head>
+
+<body>
+<h3>Insira a quantidade de depósitos</h3>
+<input type="text" id="quantidade">
+<h3>Insira o valor dos depósitos</h3>
+<input type="text" id="valor"> <br><br>
+<button onclick="grana()">Acompanhar grana</button> <br><br>
+<div id="mostrar"></div>
+</body>
+</html>
+<script>
+var tot = 0;
+
+function mostrar() {
+var qtd = quantidade.value;
+var vlr = valor.value;
+    for (var index = 1; index <= qtd; index++) {
+        if (index % 3 == 0) {
+            tot += (Number(vlr) + (Number(vlr) * 50.01));
+        } else {
+            tot += Number(vlr);
+        }
+        mostrar.innerHTML += `${index}º mês: R$ ${(tot).toFixed(2)}<br>`
+    };
+}
+</script>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 19</title>
+</head>
+
+<body>
+<h3>Quantidade de passageiros que cabem no carro</h3>
+<input type="text" id="cabem">
+<h3>Quantidade de passageiros que entraram no carro</h3>
+<input type="text" id="entrar"> <br><br>
+<button onclick="partiu()">#PartiuCarona</button> <br><br>
+<div id="mostrar"></div>
+</body>
+
+</html>
+<script>
+    function partiu() {
+        var pass = 1
+        while (pass <= cabem.value) {
+            if (pass == 1) {
+                mostrar.innerHTML += `Entrou o ${pass}º passageiro (que é o motorista)<br>`
+                pass++
+            } else {
+                mostrar.innerHTML += `Entrou o ${pass}º passageiro<br>`
+                pass++
+            }
+        } while (i <= qtdCarro.value) {
+            mostrar.innerHTML += `O ${pass}º passageiro terá que esperar!<br>`
+            pass++
+        }
+    }
+</script>
