@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 02</title>
+</head>
+<body>
+<h1>Viagens</h1>
+<h3>Coloque seu destino de viagem</h3>
+<input type="text" id="dest"> <br><br>
+<button onclick="adicionar()">Adicionar</button> <br><br>
+<button onclick="primeira()">Primeira viagem </button> <br><br>
+<button onclick="terceira()">Terceira viagem</button> <br><br>
+<button onclick="ultima()">Ultima viagem</button> <br><br>
+<div id="mostrar"></div>
+
+</body>
+</html>
+
+<script>
+var vetor = []
+
+function adicionar(){
+var destino = dest.value
+vetor.push(destino)
+dest.value = ''
+}
+
+function primeira(){
+if (vetor.length == 0) {
+    mostrar.innerHTML = 'Ainda não viajou'
+}else{
+    mostrar.innerHTML = `${vetor[0]}`
+}
+}
+
+function terceira() {
+if (vetor.length == 0) {
+    mostrar.innerHTML = 'ainda não viajou'
+}   else{
+    mostrar.innerHTML = `${vetor[2]}`
+}
+}
+
+function ultima(){
+if (vetor.length == 0) {
+    mostrar.innerHTML = 'Ainda não viajou'
+}else{
+    mostrar.innerHTML = `${vetor[vetor.length -1]}`
+}
+
+
+}
+
+</script>

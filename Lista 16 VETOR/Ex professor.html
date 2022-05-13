@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex professor</title>
+</head>
+<body>
+<h1>Professora alice</h1>
+    <h3>Coloque um nome</h3>
+    <input type="text" id="nome"> <br><br>
+    <button onclick="cadastro()">Cadastrar</button>
+    <button onclick="mostrar()">Mostrar</button> <br><br>
+    <div id="aparecer"></div>
+</body>
+</html>
+<script>
+var vetor = []
+function cadastro() {
+var aluno = nome.value
+vetor.push(aluno)
+nome.value = ''
+}
+
+
+function mostrar() {
+aparecer.innerHTML = `${vetor}<br><br>`
+
+for (var index = vetor.length -1; index >= 0; index--) {
+aparecer.innerHTML += `${index+1} ${vetor[index]}<br>`;
+    
+}
+
+}
+</script>
