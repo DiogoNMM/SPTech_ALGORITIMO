@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 07</title>
+</head>
+<body>
+<h1>Ex 07</h1>
+<h3>Coloque nomes de filmes que você goste</h3>    
+<input type="text" id="filmes"> <br><br>
+<button onclick="cadastro()">Cadastrar</button> <br><br>
+<div id="mostrar"></div>
+</body>
+</html>
+<script>
+var vetor = []
+function cadastro(){
+vetor.push(filmes.value)
+filmes.value = ''
+mostrar.innerHTML = ''
+
+for (var index = 0; index < vetor.length; index++) {
+    mostrar.innerHTML += `${vetor[index]} <br>`
+    
+}
+
+}
+
+
+
+</script>

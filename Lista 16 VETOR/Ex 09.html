@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 09</title>
+</head>
+<body>
+<h1>Ex 09</h1>
+<h3>Coloque o nome de cada projeto que criou na sua vida</h3>
+<input type="text" id="projeto"> <br><br>
+<button onclick="registro()">Registrar Projetos</button> <br><br>
+<button onclick="inversa()">Mostrar Projetos</button> <br><br>
+<div id="mostrar"></div>
+
+
+</body>
+</html>
+<script>
+var vetor = []
+function registro(){
+vetor.push(projeto.value)
+mostrar.innerHTML = ''
+projeto.value = ''
+
+var len = vetor.length
+var exp = 0
+
+if (len > 0 && len <= 4) {
+    exp = "Júnior"
+}
+if (len > 4 && len <= 12) {
+    exp = `Pleno desde o projeto ${vetor[4]}`
+}
+if (len > 12) {
+    exp = `Senior desde o projeto ${vetor[12]}`
+}
+
+mostrar.innerHTML = `${len} é a quantidade de projetos e ${exp} é seu nível de experiência`
+}
+
+function inversa(){
+mostrar.innerHTML = ''
+
+for (var index = vetor.length -1; index >= 0; index--) {
+mostrar.innerHTML += `${index+1}. ${vetor[index]}<br>`;
+    
+}
+
+}
+
+</script>
