@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 01</title>
+</head>
+<body>
+<h1>Ex 01</h1> 
+<H3>Pesquise o nome de alguma fruta</H3>
+<input type="text" id="pesquisa"> <br><br>
+<button onclick="pesquise()">Pesquisa</button> <br><br>
+<div id="mostrar"></div>
+
+
+</body>
+</html>
+
+<script>
+var vetor = ["maçã","banana","pera","melancia","uva","laranja","morango"];
+
+function pesquise(){
+
+if (vetor.indexOf(pesquisa.value) >= 0) {
+ mostrar.innerHTML = `A fruta ${pesquisa.value} existe na lista`
+}else{
+mostrar.innerHTML = `A fruta ${pesquisa.value} não existe na lista`
+}
+
+
+}
+
+</script>

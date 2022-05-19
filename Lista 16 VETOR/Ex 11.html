@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 11</title>
+</head>
+<body>
+<h1>Ex 11</h1>
+<h3>Coloque o preo de algum produto</h3>
+<input type="text" id="produto"> <br><br>
+<button onclick="cadastro()">Cadastrar</button> 
+<button onclick="atualizar()">Atualizar Estoque</button> <br><br>
+<div id="mostrar"></div>
+
+</body>
+</html>
+
+<script>
+var vetor = []
+var total = 0
+
+function cadastro(){
+vetor.push(produto.value)
+total += Number(produto.value)
+produto.value = ''
+}
+
+function atualizar(){
+mostrar.innerHTML = `Você tem ${vetor.length} produtos cadastros em estoque, seu estoque vale R${total.toFixed(2)}`
+
+
+}
+
+
+</script>
