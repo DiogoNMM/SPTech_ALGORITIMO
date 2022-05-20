@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio</title>
+</head>
+<body>
+<h1>Desafio Vetor</h1>
+
+<h2>Parte Um</h2>
+
+<h3>Idade do associado</h3>
+<input type="text" id="idade"> <br><br>
+<button onclick="cadastro()">Cadastrar</button> <br><br>
+<div id="mostrarum"></div> <br><br>
+
+
+<h2>Parte Dois</h2>
+<h3>Coloque o intervalo de ocorrência</h3>
+<h3>Intervalo um</h3>
+<input type="text" id="interum"> 
+<h3>intervalo dois</h3>
+<input type="text" id="interdois"> <br><br>
+<button onclick="analisar()">Analisar Ocorrências</button> <br><br>
+<div id="mostrardois"></div>
+
+<!-- Professor, deixei um erro no meu código  na primeira parte, por isso não consegui muito avanço, mas garanto ao senhor que eu vou terminar em casa -->
+
+
+</body>
+</html>
+<script>
+var vetor = []
+var menor = 99
+var maior = 0
+
+function cadastro(){
+mostrarum.innerHTML = ''
+
+if (idade.value < 18) {
+    alert ('Idade inferior à permitida')
+}else{
+    if (idade.value >= 65 && idade.value <= 80) {
+        alert ('Associação permitida, mas com restrição')
+    }else{
+        if (idade.value > 80) {
+            alert ('idade superior à permitida')
+        }else{
+            vetor.push(idade.value)
+        }
+    }
+}
+
+for (var index = vetor.length -1; index >= 0; index--) {
+mostrarum.innerHTML += `${vetor[index]},`;                
+}
+
+}
+
+function analisar(){
+    for (var index = 0; index <= interdois.value; index++) {
+        
+        
+        
+        
+    
+    
+        
+        
+        
+        
+        
+        
+        if (vetor.length <= 0) {
+            alert('Antes de Analisar faça o cadastro das idades')
+        }
+    }
+
+    
+
+
+
+}
+
+</script>

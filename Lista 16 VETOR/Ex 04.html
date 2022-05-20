@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ex 04</title>
+</head>
+<body>
+<h1>Ex 04</h1>
+<h3>Coloque seu filme que mais goste</h3>
+<input type="text" id="filme"> <br><br>
+<button onclick="cadastro()">Cadastrar filme</button> 
+<button onclick="ver()">Ver favoritos</button> <br><br>
+<div id="mostrar"></div>
+
+
+
+</body>
+</html>
+<script>
+var vetor = []
+function cadastro(){
+vetor.push(filme.value)
+filme.value = ''
+}
+
+function ver(){
+mostrar.innerHTML = `total ${vetor.length} <br><br> O seu filme favorito é ${vetor[0]} <br><br> E desses o que menos gosta é ${vetor[vetor.length -1]}`
+
+}
+
+
+</script>
