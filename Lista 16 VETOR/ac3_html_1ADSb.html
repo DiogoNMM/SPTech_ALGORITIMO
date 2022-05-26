@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AC3_1CCO</title>
+</head>
+
+<body>
+    <h2>Manoel Combustíveis</h2>
+    Entre com a quantidade de Anidro na gasolina: <input id="ipt_temp">
+    <button onclick="cadastrar()">Registrar</button> <br><br>
+
+    Entre com o número de uma ocorrência: <input id="ipt_ocor">
+    <button onclick="verificar()">Verificar</button> <br>
+    <div id="div_ocor"></div><br><br>
+
+    Intervalo de ocorrências para análise
+    <input id="ipt_ocor_de"> <input id="ipt_ocor_ate">
+    <button onclick="ocorrencias()">Analisar Ocorrências</button> <br>
+    <div id="div_msg"></div>
+
+</body>
+
+</html>
+
+<script>
+    vt_qtde = [];
+
+    function cadastrar() {
+        anidro = ipt_temp.value
+        vt_qtde.push(anidro)
+        
+
+        if (anidro < 20) {
+            alert('Tem algo errado com essa gasolina!!!')
+        }else if (anidro > 27) {
+            alert('Interromper o processo, gasolina batizada!!!')
+        }else if (anidro >= 22 && anidro <= 24 ) {
+            alert('Perfeito!!! Essa é a quantidade ideal!!!')
+        }
+        
+    }
+
+    function verificar() {
+        ocor = ipt_ocor.value
+
+        if (ocor <= vt_qtde.length) {
+            div_ocor.innerHTML = `Na ocorrencia ${ocor} a quantidade de Anidro registrada é ${vt_qtde[ocor -1]}`
+        }else{
+            div_ocor.innerHTML = `A ocorrencia ${ocor} não foi registrada`
+        }
+        
+    }
+
+    var maior = 0
+    var menor = 999999
+    var media = 0
+    var soma = 0
+
+    function ocorrencias() {
+        menorqtd = Number(ipt_ocor_de.value)
+        maiorqtd = Number(ipt_ocor_ate.value)
+
+        if (vt_qtde.length == 0) {
+            alert('Antes de Analisar faça o cadastro das quantidades de Anidro')
+        }
+
+
+        if (menorqtd >= maiorqtd) {
+            alert('Informar o intervalo de ocorrências corretamente')
+        }else{
+            for (var index = menorqtd -1; index < maiorqtd; index++) {
+                if (vt_qtde[index] > maior) {
+                        maior = vt_qtde[index]
+                    }
+                    if (vt_qtde[index] < menor) {
+                        menor = vt_qtde[index]
+                    }
+                    media += 1
+                    soma += vt_qtde[index]
+
+                    var mediafinal = soma / media
+
+                    div_msg.innerHTML = ` <br><br>
+                    Resumo do intervalo de ocorrências <br>
+                    Inicial: ${menorqtd} Final: ${maiorqtd} <br>
+                    Menor Quantidade do intervalo: ${menor} <br>
+                    Maior Quantidade do intervalo: ${maior} <br>
+                    Média das Quantidades do intervalo: ${mediafinal.toFixed(2)} <br>
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    `
+                    
+            }
+        }
+    }
+</script>
